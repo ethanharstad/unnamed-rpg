@@ -1,0 +1,7 @@
+!.gitkeep
+.vscode/*
+public/*
+resources/_gen/*
+node_modules/*
+*.DS_Store
+.hugo_build.lock
