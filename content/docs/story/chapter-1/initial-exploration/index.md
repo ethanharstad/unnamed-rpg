@@ -1,6 +1,6 @@
 ---
 title: Initial Exploration
-weight: 1
+weight: 10
 place: origin-ruins
 ---
 

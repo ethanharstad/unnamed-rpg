@@ -1,6 +1,6 @@
 ---
 title: Back to the Ruins
-weight: 3
+weight: 30
 description: The party returns to the ruins.
 place: Origin Ruins
 ---
@@ -17,5 +17,5 @@ They continue in and find what is explained to be a stasis pod that is nonfuncti
 There are research notes nearby explaining that the creature that was in the pod was the “God” of the {{< link "docs/factions/theocracy" >}} and that it should not ever be released back into the world. 
 
 The fourth party member is going to give some insight that the stasis pod contained a powerful entity and needs to be destroyed on sight.
-The party is going to be let to believe that they were the true threat and that they are the God when in reality they are just a part of the God.
+The party is going to be led to believe that they were the true threat and that they are the God when in reality they are just a part of the God.
 Once the part is destroyed by the party as their dying breath they will say something to indicate that there are others and prompts the party to go seek out the other.
