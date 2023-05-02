@@ -12,3 +12,11 @@ cd unnamed-rpg
 ```bash
 hugo server
 ```
+
+## Behind the scenes
+
+The site is built with [Hugo](https://gohugo.io) and [Bootstrap](https://getbootstrap.com/).
+
+The site is hosted on [Cloudflare Pages](https://developers.cloudflare.com/pages/).
+
+[Decap CMS](https://decapcms.org/) (formerly Netlify CMS) is used with a [custom auth gateway](https://github.com/i40west/netlify-cms-cloudflare-pages).
