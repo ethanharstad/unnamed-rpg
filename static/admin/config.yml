@@ -12,6 +12,7 @@ collections:
     label_singular: 'Post'
     description: 'Blog posts'
     folder: 'content/posts'
+    format: 'frontmatter'
     path: '{{slug}}/index'
     media_folder: "images"
     public_folder: "images"
@@ -29,6 +30,7 @@ collections:
     label_singular: 'Character'
     description: 'Character documentation entry'
     folder: 'content/docs/characters'
+    format: 'frontmatter'
     path: '{{slug}}/index'
     media_folder: "images"
     public_folder: "images"
@@ -42,6 +44,7 @@ collections:
     label_singular: 'Faction'
     description: 'Faction documentation entry'
     folder: 'content/docs/factions'
+    format: 'frontmatter'
     path: '{{slug}}/index'
     media_folder: "images"
     public_folder: "images"
@@ -55,6 +58,7 @@ collections:
     label_singular: 'Item'
     description: 'Item documentation entry'
     folder: 'content/docs/items'
+    format: 'frontmatter'
     path: '{{slug}}/index'
     media_folder: "images"
     public_folder: "images"
@@ -68,6 +72,7 @@ collections:
     label_singular: 'Place'
     description: 'Place documentation entry'
     folder: 'content/docs/places'
+    format: 'frontmatter'
     path: '{{slug}}/index'
     media_folder: "images"
     public_folder: "images"
@@ -81,6 +86,7 @@ collections:
     label_singular: 'Story'
     description: 'Story documentation entry'
     folder: 'content/docs/story'
+    format: 'frontmatter'
     nested:
       depth: 5
       summary: '{{title}}'

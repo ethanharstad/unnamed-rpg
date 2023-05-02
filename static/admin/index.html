@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    <script>
-      CMS.registerEditorComponent({
-        id: 'link',
-        label: 'Link',
-        fields: [
-          {
-            name: 'path',
-            label: 'Path',
-            widget: 'string'
-          },
-        ],
-        pattern: /^{{< link ([a-zA-Z0-9]+) >}}/,
-        fromBlock: function(match) {
-          return {
-            path: match[0]
-          };
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!--
+  <script>
+    CMS.registerEditorComponent({
+      id: 'link',
+      label: 'Link',
+      fields: [
+        {
+          name: 'path',
+          label: 'Path',
+          widget: 'string'
         },
-        toBlock: function(obj) {},
-        toPreview: function(obj) {},
-      });
-    </script>
-  </body>
+      ],
+      pattern: /{{< link "(.+?)".?>}}/,
+      fromBlock: function (match) {
+        console.log("fromBlock");
+        console.log(match);
+        return {
+          path: match[1]
+        };
+      },
+      toBlock: function (obj) {
+        return `{{< link \"${obj.path}\" >}}`;
+      },
+      toPreview: function (obj) {
+        return `[LINK:${obj.path}]`;
+      },
+    });
+  </script>
+  -->
+</body>
+
 </html>
