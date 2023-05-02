@@ -9,7 +9,12 @@ public_folder: /img
 collections:
   - name: 'posts'
     label: 'Posts'
+    label_singular: 'Post'
+    description: 'Blog posts'
     folder: 'content/posts'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
@@ -18,4 +23,75 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'characters'
+    label: 'Characters'
+    label_singular: 'Character'
+    description: 'Character documentation entry'
+    folder: 'content/docs/characters'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'factions'
+    label: 'Factions'
+    label_singular: 'Faction'
+    description: 'Faction documentation entry'
+    folder: 'content/docs/factions'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'items'
+    label: 'Items'
+    label_singular: 'Item'
+    description: 'Item documentation entry'
+    folder: 'content/docs/items'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'places'
+    label: 'Places'
+    label_singular: 'Place'
+    description: 'Place documentation entry'
+    folder: 'content/docs/places'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'story'
+    label: 'Story'
+    label_singular: 'Story'
+    description: 'Story documentation entry'
+    folder: 'content/docs/story'
+    nested:
+      depth: 5
+      summary: '{{title}}'
+    path: '{{slug}}/index'
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    sortable_fields: ['weight', 'title']
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number', default: 0 }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Place', name: 'place', widget: 'relation', collection: 'places', value_field: 'title', search_fields: ['title']  }
       - { label: 'Body', name: 'body', widget: 'markdown' }
