@@ -2,7 +2,7 @@
 title: Something Changes
 weight: 15
 description: The ruins begin to change after the party departs.
-place: Origin Ruins
+place: origin-ruins
 ---
 
 **CUTSCENE**

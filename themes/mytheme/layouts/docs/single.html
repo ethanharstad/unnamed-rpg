@@ -1,0 +1,61 @@
+{{ define "title" }}
+    {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<div class="container">
+    <h1>
+        {{ .Title }}
+        {{ with .Params.subtitle }}
+            <small class="text-muted">{{ . }}</small>
+        {{ end }}
+    </h1>
+    {{ with .Date }}
+        {{ .Format "January 2, 2006" }}
+    {{ end }}
+
+    {{ .Content }}
+
+    {{ if .Params.showPager }}
+        <!-- This needs to be reversed for weight ordering -->
+        <hr />
+        <div class="row">
+            {{ with .NextInSection }}
+                <div class="col text-sm-start">
+                    Prev:
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+            {{ end }}
+            {{ with .PrevInSection }}
+                <div class="col text-sm-end">
+                    Next:
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ define "sidebar" }}
+<div class="col col-md-3">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            <p class="card-text">{{ .Params.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            {{ with .Site.GetPage (printf "/docs/places/%s" (.Params.Get "place") ) }}
+                <li class="list-group-item">
+                    <b>Location: </b>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+            {{ with .Site.GetPage (printf "/docs/factions/%s" (.Params.Get "faction") ) }}
+                <li class="list-group-item">
+                    <b>Faction: </b>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}

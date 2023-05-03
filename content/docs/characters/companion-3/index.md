@@ -1,5 +1,6 @@
 ---
 title: Companion 3
+faction: party
 ---
 
 This character joins your party after the discovery at the ruins.

@@ -1,5 +1,6 @@
 ---
 title: God
+faction: theocracy
 ---
 
 This is the page for "God"

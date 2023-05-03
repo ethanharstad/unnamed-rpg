@@ -2,7 +2,7 @@
 title: Back to the Ruins
 weight: 30
 description: The party returns to the ruins.
-place: Origin Ruins
+place: origin-ruins
 ---
 
 A month later the party is approached by {{< link "docs/characters/companion-3" >}} who joins the party of {{< link "docs/characters/main" >}}, {{< link "docs/characters/companion-1" >}}, and {{< link "docs/characters/companion-2" >}}.

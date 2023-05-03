@@ -1,5 +1,6 @@
 ---
 title: Main Character
+faction: party
 ---
 
 This is the main character.

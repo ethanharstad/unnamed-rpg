@@ -1,5 +1,6 @@
 ---
 title: Origin Ruins
+faction: theocracy
 ---
 
 Ruins outside the city of {{< link "docs/places/origin-city" >}}.
