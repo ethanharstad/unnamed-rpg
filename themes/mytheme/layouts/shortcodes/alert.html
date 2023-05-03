@@ -1,0 +1,6 @@
+<div class="alert alert-{{- default `primary` ( .Get `type` ) -}}" role="alert">
+    {{ with ( .Get "title" ) }}
+    <h4 class="alert-heading">{{ . }}</h4>
+    {{ end }}
+    {{ .Inner }}
+</div>
