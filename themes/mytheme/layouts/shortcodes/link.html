@@ -1,3 +1,9 @@
-{{- with .Page.GetPage (.Get 0) -}}
-<a href="{{ .RelPermalink }}">{{- .Title -}}</a>
-{{- end -}}
+{{ if .IsNamedParams }}
+    {{- with .Page.GetPage (.Get "path") -}}
+        <a href="{{ .RelPermalink }}">{{- default .Title ($.Get "text") -}}</a>
+    {{- end -}}
+{{ else }}
+    {{- with .Page.GetPage (.Get 0) -}}
+        <a href="{{ .RelPermalink }}">{{- .Title -}}</a>
+    {{- end -}}
+{{ end }}

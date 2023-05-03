@@ -34,11 +34,12 @@ Inner Text
 #### Link
 
 ```markdown
-{{< link "path" text="link text" >}}
+{{< link path="path" text="link text" >}}
 ```
 
 `path` is the string path to a hugo page.
 The page title will be used as the link text unless overridden.
+If no text is provided, the `path=` portion can be omitted and provided as a bare string instead.
 
 `text` is an optional parameter that overrides the link text.
 
