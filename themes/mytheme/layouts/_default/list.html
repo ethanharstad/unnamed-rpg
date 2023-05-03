@@ -5,12 +5,14 @@
 <div class="container">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    {{ with .Paginator.Pages }}
     <h2>Pages</h2>
     <ul>
-        {{ range .Paginator.Pages }}
+        {{ range . }}
         {{ .Render "summary" }}
         {{ end }}
     </ul>
+    {{ end }}
     {{ with .Sections }}
     <h2>Sections</h2>
     <ul>

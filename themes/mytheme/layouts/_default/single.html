@@ -14,5 +14,24 @@
     {{ end }}
 
     {{ .Content }}
+
+    {{ if .Params.showPager }}
+    <!-- This needs to be reversed for weight ordering -->
+    <hr />
+    <div class="row">
+        {{ with .NextInSection }}
+        <div class="col text-sm-start">
+            Prev:
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </div>
+        {{ end }}
+        {{ with .PrevInSection }}
+        <div class="col text-sm-end">
+            Next:
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
 </div>
 {{ end }}

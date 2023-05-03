@@ -2,5 +2,11 @@
 <div class="container">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    <h2>Recent Updates</h2>
+    <ul>
+        {{ range first 10 .Site.RegularPages.ByLastmod.Reverse }}
+        {{ .Render "summary" }}
+        {{ end }}
+    </ul>
 </div>
 {{ end }}

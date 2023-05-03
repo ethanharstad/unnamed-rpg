@@ -2,6 +2,9 @@ baseURL = 'https://unnamed-rpg.pages.dev/'
 languageCode = 'en-us'
 title = 'Game?'
 theme = 'mytheme'
+copyright = '© FooBarBaz - 2023 All rights reserved.'
+
+enableGitInfo = true
 
 [module]
     [[module.mounts]]
